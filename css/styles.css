@@ -207,12 +207,6 @@ body {
   margin-right: 40px;
 }
 
-.current-page {
-  position: relative;
-  color: var(--color-ocean-hover);
-  transition: background-color var(--transition-dur-func);
-}
-
 .menu-link {
   padding-top: 24px;
   padding-bottom: 24px;
@@ -231,6 +225,13 @@ body {
 .menu-link:hover,
 .menu-link:focus {
   color: var(--color-ocean-hover);
+}
+
+.current-page {
+  position: relative;
+  color: var(--color-ocean-hover);
+
+  transition: background-color var(--transition-dur-func);
 }
 
 .current-page::after {
