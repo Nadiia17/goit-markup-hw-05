@@ -231,6 +231,7 @@ body {
   position: relative;
   color: var(--color-ocean-hover);
 
+  transition: color var(--transition-dur-func);
   transition: background-color var(--transition-dur-func);
 }
 
