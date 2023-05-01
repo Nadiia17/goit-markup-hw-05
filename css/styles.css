@@ -227,11 +227,11 @@ body {
   color: var(--color-ocean-hover);
 }
 
-.current-page {
+.current-page.menu-link {
   position: relative;
   color: var(--color-ocean-hover);
-
-  transition: color var(--transition-dur-func), background-color var(--transition-dur-func);
+  transition: color var(--transition-dur-func);
+  transition: background-color var(--transition-dur-func);
 }
 
 .current-page::after {
