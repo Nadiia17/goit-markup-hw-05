@@ -235,10 +235,11 @@ body {
 .current-page::after {
   content: "";
   position: absolute;
+  left: 0px;
+  bottom: -1px;
+
   width: 100%;
   height: 4px;
-  left: 0px;
-  bottom: 0px;
 
   display: block;
 
@@ -508,7 +509,7 @@ body {
   border: 1px solid var(--color-cornflower);
   border-radius: 4px;
   transition: color var(--transition-dur-func), background-color var(--transition-dur-func),
-    border-color var(--transition-dur-func);
+    border-color var(--transition-dur-func), box-shadow var(--transition-dur-func);
 }
 
 .button-portfolio:hover,
@@ -532,14 +533,14 @@ body {
   flex-direction: column; for card stretching
 } */
 
-.project-link:hover,
-.project-link:focus {
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-}
-
 .project-link {
   /* display: contents; for card stretching */
   display: block;
+  transition: box-shadow var(--transition-dur-func);
+}
+.project-link:hover,
+.project-link:focus {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .project-card-content {
@@ -666,12 +667,14 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 408px;
-  height: 584px;
+  min-height: 576px;
   background-color: var(--color-dairy);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  transition: transform var(--transition-dur-func);
 }
 .modal-close-btn {
+  padding: 0;
   position: absolute;
   top: 24px;
   right: 24px;
@@ -686,10 +689,20 @@ body {
   background: var(--color-cornflower);
   border: 1px solid rgba(0, 0, 0, 0.1);
 
-  transition: background-color var(--transition-dur-func);
+  transition: background-color var(--transition-dur-func), border var(--transition-dur-func);
 }
 
 .modal-close-btn:hover,
 .modal-close-btn:focus {
-  background-color: var(--color-light-slate);
+  background-color: var(--color-ocean-hover);
+  border: none;
+}
+
+.modal-close-icon {
+  transition: fill var(--transition-dur-func);
+}
+
+.modal-close-btn:hover .modal-close-icon,
+.modal-close-btn:focus .modal-close-icon {
+  fill: var(--color-white);
 }
